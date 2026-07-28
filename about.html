@@ -1,426 +1,98 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>화곡 가라오케 가격 찐정보 | 단골만 아는 꿀팁</title>
-    <meta name="description" content="화곡 가라오케 가격 찐으로 저렴한 곳 찾는다면? 화곡동 단골들이 인정한 가라오케, 시간당 2만원대 실화냐? 010-6279-0862 지금 전화해봐.">
-    <meta name="keywords" content="화곡 가라오케, 화곡 가라오케 가격, 화곡동 가라오케, 화곡 노래방, 화곡 가성비 가라오케, 화곡술집, 화곡유흥">
-    <meta name="bpaas-design-system" content="brutalist-avantgarde">
-    <meta name="bpaas-design-theme" content="kr-acid-yellow">
-    <link rel="canonical" href="https://hwagok-song-review.namanavi.com/about.html">
-    <meta property="og:title" content="화곡 가라오케 가격 찐후기 | No.1">
-    <meta property="og:description" content="화곡 가라오케 가격 찐하게 저렴한 곳, 단골들만 아는 꿀팁 대방출">
-    <meta property="og:type" content="website">
-    <meta name="twitter:card" content="summary_large_image">
-    <style>
-        /* RESET + BASE */
-        *, *::before, *::after {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-            font-size: 16px;
-        }
-
-        body {
-            font-family: 'Courier New', Courier, 'Apple SD Gothic Neo', monospace;
-            background: #f5f0e8;
-            color: #1a1a1a;
-            line-height: 1.6;
-            padding: 0 20px;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-        }
-
-        /* SPACE: airy */
-        :root {
-            --space-unit: 1.2rem;
-            --space-sm: calc(var(--space-unit) * 0.75);
-            --space-md: var(--space-unit);
-            --space-lg: calc(var(--space-unit) * 2);
-            --space-xl: calc(var(--space-unit) * 3);
-            --brutal-yellow: #f7d44a;
-            --brutal-pink: #f0556f;
-            --brutal-black: #111;
-            --brutal-white: #faf9f6;
-            --accent: #1f8b4c;
-        }
-
-        /* BRUTAL BASE */
-        h1, h2, h3, h4 {
-            font-weight: 900;
-            letter-spacing: -0.03em;
-            text-transform: uppercase;
-            line-height: 1.1;
-        }
-
-        h1 {
-            font-size: clamp(2.4rem, 8vw, 4.2rem);
-            border-bottom: 6px solid var(--brutal-black);
-            display: inline-block;
-            padding-bottom: 0.2em;
-            margin-bottom: var(--space-lg);
-        }
-
-        h2 {
-            font-size: clamp(1.8rem, 5vw, 2.8rem);
-            border-left: 12px solid var(--brutal-yellow);
-            padding-left: var(--space-md);
-            margin: var(--space-xl) 0 var(--space-md) 0;
-        }
-
-        h3 {
-            font-size: 1.6rem;
-            margin: var(--space-lg) 0 var(--space-sm) 0;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        h4 {
-            font-size: 1.3rem;
-            margin-bottom: var(--space-sm);
-        }
-
-        p, li {
-            font-size: 1.1rem;
-            margin-bottom: var(--space-sm);
-            max-width: 70ch;
-        }
-
-        a {
-            color: var(--brutal-black);
-            text-decoration-thickness: 3px;
-            text-underline-offset: 4px;
-            font-weight: 700;
-            transition: all 0.1s ease;
-        }
-
-        a:hover {
-            background: var(--brutal-yellow);
-            text-decoration: none;
-            padding: 0 4px;
-        }
-
-        img, svg {
-            max-width: 100%;
-            height: auto;
-            display: block;
-        }
-
-        ul {
-            list-style: none;
-            padding-left: 0;
-        }
-
-        li {
-            padding-left: 1.5rem;
-            position: relative;
-        }
-
-        li::before {
-            content: "▸";
-            position: absolute;
-            left: 0;
-            color: var(--brutal-pink);
-            font-weight: bold;
-        }
-
-        /* BORDERS brutal */
-        .brutal-border {
-            border: 4px solid var(--brutal-black);
-            box-shadow: 8px 8px 0 var(--brutal-black);
-            padding: var(--space-md);
-            background: var(--brutal-white);
-            transition: box-shadow 0.15s, transform 0.15s;
-        }
-
-        .brutal-border:hover {
-            transform: translate(-2px, -2px);
-            box-shadow: 12px 12px 0 var(--brutal-black);
-        }
-
-        /* NAV — present + hamburger (반응형) */
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: var(--space-md) 0;
-            border-bottom: 4px solid var(--brutal-black);
-            margin-bottom: var(--space-lg);
-            flex-wrap: wrap;
-            position: relative;
-        }
-
-        .nav-logo a {
-            font-size: 1.8rem;
-            font-weight: 900;
-            text-decoration: none;
-            background: var(--brutal-yellow);
-            padding: 0.2rem 0.8rem;
-            border: 3px solid var(--brutal-black);
-        }
-
-        .nav-links {
-            display: flex;
-            gap: var(--space-md);
-            align-items: center;
-        }
-
-        .nav-links a {
-            font-size: 1.2rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            padding: 0.3rem 0.6rem;
-            border: 2px solid transparent;
-        }
-
-        .nav-links a:hover {
-            border-color: var(--brutal-black);
-            background: var(--brutal-yellow);
-        }
-
-        .tel-link {
-            background: var(--brutal-black);
-            color: var(--brutal-yellow) !important;
-            padding: 0.4rem 1rem !important;
-            border: 3px solid var(--brutal-black) !important;
-            font-size: 1.4rem !important;
-        }
-
-        .tel-link:hover {
-            background: var(--brutal-pink) !important;
-            color: #fff !important;
-            border-color: var(--brutal-pink) !important;
-        }
-
-        /* hamburger menu (모바일) */
-        .hamburger-menu {
-            display: none;
-            flex-direction: column;
-            gap: 5px;
-            cursor: pointer;
-            background: none;
-            border: none;
-            padding: 10px 5px;
-        }
-
-        .hamburger-menu span {
-            display: block;
-            width: 32px;
-            height: 5px;
-            background: var(--brutal-black);
-            border-radius: 2px;
-            transition: 0.2s;
-        }
-
-        @media (max-width: 768px) {
-            .hamburger-menu {
-                display: flex;
-            }
-
-            .nav-links {
-                display: none;
-                flex-direction: column;
-                width: 100%;
-                background: var(--brutal-white);
-                border: 4px solid var(--brutal-black);
-                padding: var(--space-md);
-                margin-top: var(--space-sm);
-                gap: var(--space-sm);
-            }
-
-            .nav-links.active {
-                display: flex;
-            }
-
-            .nav-links a {
-                width: 100%;
-                text-align: left;
-                border: 2px solid var(--brutal-black);
-                padding: 0.5rem;
-            }
-
-            .tel-link {
-                text-align: center !important;
-            }
-
-            body {
-                padding: 0 12px;
-            }
-        }
-
-        /* 카드, 섹션 */
-        .card-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: var(--space-lg);
-            margin: var(--space-lg) 0;
-        }
-
-        .info-card {
-            background: var(--brutal-white);
-            border: 4px solid var(--brutal-black);
-            padding: var(--space-md);
-            box-shadow: 6px 6px 0 var(--brutal-black);
-        }
-
-        .info-card h4 {
-            border-bottom: 3px dashed var(--brutal-pink);
-            padding-bottom: 0.2em;
-        }
-
-        .price-highlight {
-            background: var(--brutal-yellow);
-            font-weight: 900;
-            padding: 0.2rem 0.6rem;
-            display: inline-block;
-            border: 2px solid var(--brutal-black);
-            font-size: 1.8rem;
-        }
-
-        .faq-item {
-            border-left: 6px solid var(--brutal-pink);
-            padding-left: var(--space-md);
-            margin: var(--space-md) 0;
-        }
-
-        .faq-item strong {
-            font-size: 1.2rem;
-            display: block;
-            margin-bottom: 0.2rem;
-        }
-
-        footer {
-            margin-top: auto;
-            padding: var(--space-lg) 0;
-            border-top: 4px solid var(--brutal-black);
-            text-align: center;
-            font-weight: bold;
-        }
-
-        /* 반응형 768 이하 + 기타 */
-        @media (max-width: 480px) {
-            h1 {
-                font-size: 2.2rem;
-            }
-            .price-highlight {
-                font-size: 1.4rem;
-            }
-        }
-
-        .bg-brutal-stripe {
-            background: repeating-linear-gradient(45deg, var(--brutal-yellow), var(--brutal-yellow) 12px, #f5f0e8 12px, #f5f0e8 24px);
-            padding: var(--space-md);
-            border: 4px solid var(--brutal-black);
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>화곡 가라오케 가격 정보 – 투명한 판단 기준과 예산 설계법</title>
+<meta name="description" content="화곡 가라오케 가격 선택 시 실패하지 않기 위해 반드시 확인해야 할 투명한 판단 기준과 인원별, 목적별 예산 설계법을 제시합니다. 실무자를 위한 가이드.">
+<meta name="keywords" content="화곡 가라오케 가격, 화곡 가라오케, 화곡 유흥, 비즈니스 접대 기준, 가격 비교">
+<link rel="canonical" href="https://hwagok-song-review.namanavi.com/about.html">
+<meta name="generator" content="custom-cms-pbn9">
+<meta name="bpaas-design-system" content="editorial-apple">
+<meta name="bpaas-design-theme" content="kr-ledger-cool">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://hwagok-song-review.namanavi.com/about.html">
+<meta property="og:title" content="화곡 가라오케 가격 정보 – 투명한 판단 기준과 예산 설계법">
+<meta property="og:description" content="화곡 가라오케 가격 선택 시 실패하지 않기 위해 반드시 확인해야 할 투명한 판단 기준과 인원별, 목적별 예산 설계법을 제시합니다. 실무자를 위한 가이드.">
 </head>
 <body>
+<header class="x-hero-heot">
+<h1 class="r-head-84ys">화곡 가라오케 가격 정보</h1>
+<p class="x-side-wwrs-link">투명한 판단으로 똑똑한 선택을 하세요.</p>
+</header>
+<nav class="nav-present">
+<ul class="x-side-wwrs-menu">
+<li><a class="x-side-wwrs-link" href="#">홈</a></li>
+<li><a class="x-side-wwrs-link" href="#">가격</a></li>
+<li><a class="x-side-wwrs-link" href="#">정보</a></li>
+<li><a class="x-side-wwrs-link" href="#">리뷰</a></li>
+<li><a class="x-side-wwrs-link" href="#">문의</a></li>
+</ul>
+</nav>
+<div class="x-side-wwrs-container">
+<section class="r-head-84ys">
+<h2>왜 가격 정보가 중요한가?</h2>
+<p>화곡 지역에서 가라오케를 이용할 때 가장 먼저 마주치는 고민은 ‘가격’이죠. 그런데 단순히 저렴하다고 좋은 선택이 아닙니다. hidden cost, 시간제, 주말 할증, 인원별 추가 요금 등 다양한 변수가 숨어있습니다. 이 페이지는 those hidden 요소를 드러내고, 당신이 합리적인 결정을 내릴 수 있도록 돕습니다.</p>
+<p>가격 정보를 단순히 나열하는 게 아니라, 당신이 반드시 확인해야 할 체크리스트와 예산 설계 프레임워크를 제시합니다. 이를 통해 과소비 없이 목적에 맞는 서비스를 선택할 수 있습니다.</p>
+</section>
 
-    <!-- NAV -->
-    <nav>
-        <div class="nav-logo">
-            <a href="/">화곡♥노래</a>
-        </div>
-        <button class="hamburger-menu" aria-label="메뉴 열기" onclick="this.nextElementSibling.classList.toggle('active')">
-            <span></span><span></span><span></span>
-        </button>
-        <div class="nav-links">
-            <a href="/">홈</a>
-            <a href="/info">정보</a>
-            <a href="/price">가격</a>
-            <a href="/review">후기</a>
-            <a href="tel:01062790862" class="tel-link">☎ 010-6279-0862</a>
-        </div>
-    </nav>
+<section class="r-head-84ys">
+<h2>가격 구성 요소 살펴보기</h2>
+<p>가라오케 가격은 기본 이용 요금, 시간대별 할증, 인원 추가 요금, 주류·안주 옵션, 특별 이벤트 사용료 등으로 나뉩니다. 기본 요금은 보통 룸 크기와 시설 수준에 따라 결정되며, 이는 사전에 확인해야 할 첫 번째 체크포인트입니다.</p>
+<p>둘째, 시간대별 할증. 야간이나 주말에는 기본 요금에 20~50% 할증이 적용될 수 있습니다. 이때 할증 기준이 명확히 제시되지 않으면 예상보다 크게 청구될 수 있으니, 예약 시 반드시 할증 정책을 확인하세요.</p>
+<p>셋째, 인원 추가 요금. 기본 인원을 초과할 경우 per person 요금이 부과되며, 일부 업소는 인원 제한을 두어 추가 인원을 받지 않기도 합니다. 이용 인원과 정책을 사전에 조율하는 것이 중요합니다.</p>
+</section>
 
-    <!-- 메인 콘텐츠: 정보 페이지 -->
-    <main>
-        <h1>화곡 가라오케 가격 찐정보</h1>
-        <p class="brutal-border" style="font-size:1.3rem; font-weight:700; background:var(--brutal-yellow);">
-            ⏱️ 시간당 2만원대? 실화냐? 형들 여기 다 있어. 단골들만 아는 꿀팁 다 풀었다.
-        </p>
+<section class="r-head-84ys">
+<h2>인원별 예산 설계 가이드</h2>
+<p>2~4인 소규모 모임이라면 기본 룸을 선택하고, 주류는 셀프 바 또는 간단한 안주 위주로 구성하면 비용을 절감할 수 있습니다. 이때 중요한 것은 기본 요금에 포함된 음료 범위를 확인하는 것.</p>
+<p>5~8인 중규모 모임은 중형 룸을 고려하고, 안주 플atter 또는 세트 메뉴를 미리 문의해 보세요. 세트 메뉴는 개별 주문보다 가격 효율이 높을 때가 많습니다.</p>
+<p>9인 이상 대형 단체라면 대형 룸 또는 파티 전용 공간을 알아봐야 하며, 이때는 최소 이용 시간과 주말 할증이 크게 작용할 수 있으니, weekday 이용을 권장합니다.</p>
+</section>
 
-        <section>
-            <h2>💰 진짜 가격표 (2025 기준)</h2>
-            <div class="card-grid">
-                <div class="info-card">
-                    <h4>🔸 룸 타임</h4>
-                    <p><span class="price-highlight">2.5만원</span> / 1시간 (2인 기준)</p>
-                    <p>주말에도 동일 가격! 대신 전화하고 가는게 좋아. <br> 
-                    <a href="tel:01062790862">지금 전화해서 찐가격 확인</a></p>
-                </div>
-                <div class="info-card">
-                    <h4>🔸 음료 & 안주</h4>
-                    <p>맥주 5,000원부터 / 안주 8,000~15,000원</p>
-                    <p>소주 4,000원, 양주도 부담 없어. 가성비 미쳤다.</p>
-                </div>
-                <div class="info-card">
-                    <h4>🔸 단골 혜택</h4>
-                    <p>첫 방문 후 재방문 시 <strong>1시간 무료</strong> (전화예약 필수)</p>
-                    <p>매일 18시 전 입장 시 30분 추가 서비스!</p>
-                </div>
-            </div>
-        </section>
+<section class="r-head-84ys">
+<h2>목적별 활용법과 가격 팁</h2>
+<p>비즈니스 접대: 조용한 분위기와 기본 안주가 포함된 패키지를 선호합니다. 이때 중요한 것은 서비스 charge와 부가세 포함 여부를 계약서에 명시하는 것입니다.</p>
+<p>친목 모임: 테마 룸이나 파티 조명 옵션을 활용해 분위기를 업그레이드할 수 있지만, 이러한 옵션은 별도 요금이 발생하니 사전에 견적을 받아보세요.</p>
+<p>생일·기념일: 케이크 반입 가능 여부와 외부 음식 반입 정책을 확인해야 합니다. 일부 업소는 반입료를 부과하니, 이 부분을 간과하면 예상치 못한 비용이 발생합니다.</p>
+</section>
 
-        <section>
-            <h2>📍 화곡동에서 이 가격? 거짓말 아님</h2>
-            <div class="brutal-border bg-brutal-stripe">
-                <p style="font-size:1.2rem; font-weight:800;">내가 화곡에서 3년째 다니는 이유:</p>
-                <ul>
-                    <li>룸이 넓고 (최대 15인) 음향이 진짜 깔끔함</li>
-                    <li>사장님이 직접 내는 칵테일 (이건 찐)</li>
-                    <li>화장실도 깨끗하고, 담배 냄새 1도 없음</li>
-                    <li>전화하면 픽업도 가능?  <a href="tel:01062790862">010-6279-0862</a></li>
-                </ul>
-            </div>
-        </section>
+<section class="r-head-84ys">
+<h2>투명한 판단 기준 체크리스트</h2>
+<ul>
+<li>기본 요금에 포함되는 항목(룸 이용 시간, 기본 음료 수) 확인</li>
+<li>시간대별 할증율과 적용 시간대 명확히 고지 여부</li>
+<li>인원 초과 시 per person 요금 및 최대 인원 제한</li>
+<li>안주 및 주류 옵션 별도 가격표 제공 여부</li>
+<li>예약 취소·변경 시 벌금 정책</li>
+<li>추가 서비스(파티 조명, karaoke 기계 업그레이드) 비용 사전 고지</li>
+</ul>
+<p>위 항목들을 모두 체크한 후에야 비로소 ‘가격’이 투명하다고 볼 수 있습니다. 누락된 항목이 하나라도 있다면, 최종 청구서에서 예상치 못한 추가 비용이 발생할 위험이 높습니다.</p>
+</section>
 
-        <section>
-            <h2>❓ 자주 묻는 질문 (FAQ)</h2>
-            <div class="faq-item">
-                <strong>Q. 가격이 진짜 2만원대 맞아요? 웃긴거 아니죠?</strong>
-                <p>A. 형, 나도 처음에 의심했어. 근데 진짜야. 2인 기준 1시간 2.5만원. 주말에도 똑같아. 단, 전화하고 가면 더 혜택 받을 수 있음. <a href="tel:01062790862">전화하기</a></p>
-            </div>
-            <div class="faq-item">
-                <strong>Q. 화곡역에서 가까워요?</strong>
-                <p>A. 화곡역 4번 출구 도보 3분. 골목 안쪽이라 처음엔 찾기 어려울 수 있는데, 전화하면 위치 알려줌. <br> 
-                <em>"형, 지금 어디야? 나가서 맞이할게"</em> 이런 느낌.</p>
-            </div>
-            <div class="faq-item">
-                <strong>Q. 예약 필수인가요?</strong>
-                <p>A. 워크인도 가능한데, 주말엔 거의 풀부킹. 전화 한 통이면 바로 예약 완료. <br>
-                <a href="tel:01062790862" style="font-size:1.4rem;">☎ 010-6279-0862</a> <br>
-                문자도 가능! 카톡도 됨 (같은 번호)</p>
-            </div>
-            <div class="faq-item">
-                <strong>Q. 회식이나 단체로 가도 괜찮아요?</strong>
-                <p>A> 완전 좋아. 15인 룸 있고, 마이크 4개라 다같이 떠들기 좋음. 전에 회식 10명 왔는데 다들 미친듯이 놀다 갔어.</p>
-            </div>
-        </section>
-
-        <section>
-            <h2>🔥 형이 추천하는 코스</h2>
-            <div class="card-grid">
-                <div class="info-card">
-                    <h4>👊 1코스 (2인)</h4>
-                    <p>2시간 + 맥주 2병 + 안주 = 약 7만원</p>
-                    <p>가성비 끝판왕. 친구랑 둘이 놀기 딱 좋아.</p>
-                </div>
-                <div class="info-card">
-                    <h4>🍻 2코스 (4~6인)</h4>
-                    <p>3시간 + 소주 2 + 맥주 3 + 과일안주 = 15만원대</p>
-                    <p>단체로 와서 1인당 3만원 꼴. 실화?</p>
-                </div>
-                <div class="info-card">
-                    <h4>🎤 3코스 (단골용)</h4>
-                    <p>전화해서 "형 코스 부탁해" 하면 사장님이 알아서 맞춤.</p>
-                    <p><a href="tel:01062790862">지금 전화해서
+<section class="r-head-84ys">
+<h2>FAQ</h2>
+<div class="r-head-84ys">
+<h3>Q1. 가격이 저렴한 곳이 항상 좋은가?</h3>
+<p>아니요. 저렴한 가격 뒤에 숨은 제한 시간이나 기본 음료 수 부족, 시설 노후화 등이 있을 수 있습니다. 종합적인 조건을 비교해야 합니다.</p>
+</div>
+<div class="r-head-84ys">
+<h3>Q2. 주말에 이용하면 꼭 할증이 적용되나요?</h3>
+<p>대부분의 업소에서 주말 할증이 적용되지만, 비율과 적용 시간은 업소마다 다릅니다. 예약 시 반드시 확인하세요.</p>
+</div>
+<div class="r-head-84ys">
+<h3>Q3. 인원 수를 초과하면 어떻게 되나요?</h3>
+<p>기본 인원을 초과할 경우 per person 요금이 추가되거나, 일부 업소는 입장을 제한할 수 있습니다. 이용 전 정확한 인원 정책을 문의하세요.</p>
+</div>
+<div class="r-head-84ys">
+<h3>Q4. 외부 음식 반입이 가능한가요?</h3>
+<p>외부 음식 반입 가능 여부와 반입료는 업소별로 상이합니다. 사전에 확인하지 않으면 예상치 못한 비용이 발생할 수 있습니다.</p>
+</div>
+</section>
+</div>
+<footer>
+<button class="k-foot-tway-btn">문의하기</p>
+<p class="x-side-wwrs-link">© 2025 화곡 가라오케 가이드. All rights reserved.</p>
+</footer>
 </body>
 </html>
