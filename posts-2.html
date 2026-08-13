@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>글 목록 (2/2) · t3b08-hg-karaoke-pr</title>
+  <meta name="description" content="t3b08-hg-karaoke-pr에 올라온 글 목록입니다.">
+  <link rel="canonical" href="https://hwagok-song-review.namanavi.com/posts-2.html">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <style>
+ :root {
+ --bg-primary: #0a0f14;
+ --bg-secondary: #111820;
+ --bg-card: #161e28;
+ --text-primary: #e8edf3;
+ --text-secondary: #94a3b8;
+ --text-tertiary: #64748b;
+ --accent-teal: #14b8a6;
+ --accent-teal-dim: #0f766e;
+ --accent-amber: #f59e0b;
+ --border-subtle: #1e293b;
+ --border-active: #14b8a6;
+ --font-display: 'Pretendard', 'Noto Sans KR', sans-serif;
+ --font-body: 'Pretendard', 'Noto Sans KR', sans-serif;
+ --font-mono: 'JetBrains Mono', 'D2Coding', monospace;
+ --radius-sharp: 0px;
+ --radius-card: 2px;
+ --shadow-brutal: 4px 4px 0px #14b8a6;
+ --shadow-brutal-hopx 6px 0px #14b8a6;
+ --grid-gap: 24px;
+ --max-width: 1280px;
+ }
+
+ * {
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+ }
+
+ body {
+ font-family: var(--font-body);
+ background-color: var(--bg-primary);
+ color: var(--text-primary);
+ line-height: 1.7;
+ font-size: 16px;
+ -webkit-font-smoothing: antialiased;
+ -moz-osx-font-smoothing: grayscale;
+ letter-spacing: -0.01em;
+ }
+
+ body[data-theme="night-transit"] {
+ background-image:
+ linear-gradient(rgba(20, 184, 166, 0.03) 1px, transparent 1px),
+ linear-gradient(90deg, rgba(20, 184, 166, 0.03) 1px, transparent 1px);
+ background-size: 40px 40px;
+ background-position: center center;
+ }
+
+ header {
+ background-color: var(--bg-card);
+ border-bottom: 2px solid var(--border-subtle);
+ padding: 20px 0;
+ position: sticky;
+ top: 0;
+ z-index: 100;
+ backdrop-filter: blur(12px);
+ background-color: rgba(22, 30, 40, 0.92);
+ }
+
+ .nav-container {
+ max-width: var(--max-width);
+ margin: 0 auto;
+ padding: 0 24px;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ flex-wrap: wrap;
+ gap: 16px;
+ }
+
+ .nav-logo {
+ font-family: var(--font-display);
+ font-size: 1.5rem;
+ font-weight: 800;
+ color: var(--accent-teal);
+ text-decoration: none;
+ letter-spacing: -0.02em;
+ text-transform: uppercase;
+ border: 2px solid var(--accent-teal);
+ padding: 8px 16px;
+ background: transparent;
+ transition: all 0.2s ease;
+ }
+
+ .nav-logo:hover {
+ background: var(--accent-teal);
+ color: var(--bg-primary);
+ box-shadow: var(--shadow-brutal);
+ }
+
+ .nav-links {
+ display: flex;
+ gap: 12px;
+ align-items: center;
+ flex-wrap: wrap;
+ list-style: none;
+ }
+
+ .nav-links a {
+ color: var(--text-secondary);
+ text-decoration: none;
+ font-size: 0.9rem;
+ font-weight: 600;
+ letter-spacing: 0.02em;
+ padding: 8px 14px;
+ border: 1px solid transparent;
+ transition: all 0.2s ease;
+ text-transform: uppercase;
+ font-family: var(--font-mono);
+ }
+
+ .nav-links a:hover {
+ color: var(--accent-teal);
+ border-color: var(--accent-teal);
+ background: rgba(20, 184, 166, 0.05);
+ }
+
+ h1, h2, h3 {
+ font-family: var(--font-display);
+ color: var(--text-primary);
+ letter-spacing: -0.03em;
+ font-weight: 800;
+ line-height: 1.3;
+ }
+
+ h1 {
+ font-size: 2.8rem;
+ text-transform: uppercase;
+ border-left: 6px solid var(--accent-teal);
+ padding-left: 24px;
+ margin-bottom: 24px;
+ }
+
+ h2 {
+ font-size: 1.8rem;
+ margin-top: 48px;
+ margin-bottom: 20px;
+ padding-bottom: 12px;
+ border-bottom: 2px dashed var(--border-subtle);
+ text-transform: uppercase;
+ display: flex;
+ align-items: center;
+ gap: 12px;
+ }
+
+ h2::before {
+ content: "◆";
+ color: var(--accent-teal);
+ font-size: 1.2rem;
+ }
+
+ h3 {
+ font-size: 1.3rem;
+ margin-top: 32px;
+ margin-bottom: 12px;
+ color: var(--accent-teal);
+ }
+
+ .hero-class-container {
+ max-width: var(--max-width);
+ margin: 48px auto 32px;
+ padding: 0 24px;
+ display: grid;
+ grid-template-columns: 1fr;
+ gap: 24px;
+ background: var(--bg-card);
+ border: 2px solid var(--border-subtle);
+ padding: 40px;
+ position: relative;
+ overflow: hidden;
+ }
+
+ .hero-class-container::before {
+ content: "";
+ position: absolute;
+ top: -50%;
+ left: -50%;
+ width: 200%;
+ height: 200%;
+ background: radial-gradient(circle at 30% 50%, rgba(20, 184, 166, 0.08) 0%, transparent 60%);
+ pointer-events: none;
+ }
+
+ .hero-class-container .hero-meta {
+ font-family: var(--font-mono);
+ color: var(--accent-amber);
+ font-size: 0.85rem;
+ text-transform: uppercase;
+ letter-spacing: 0.1em;
+ position: relative;
+ z-index: 1;
+ }
+
+ .hero-class-container .hero-title-wrap {
+ position: relative;
+ z-index: 1;
+ }
+
+ .grid-class-layout {
+ max-width: var(--max-width);
+ margin: 0 auto 48px;
+ padding: 0 24px;
+ display: grid;
+ grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+ gap: var(--grid-gap);
+ }
+
+ .card-class-item {
+ background: var(--bg-card);
+ border: 2px solid var(--border-subtle);
+ padding: 28px;
+ transition: all 0.25s ease;
+ position: relative;
+ }
+
+ .card-class-item:hover {
+ border-color: var(--accent-teal);
+ box-shadow: var(--shadow-brutal);
+ transform: translate(-2px, -2px);
+ }
+
+ .card-class-item h3 {
+ margin-top: 0;
+ font-size: 1.2rem;
+ border-bottom: 1px solid var(--border-subtle);
+ padding-bottom: 12px;
+ margin-bottom: 16px;
+ }
+
+ .card-class-item p {
+ color: var(--text-secondary);
+ font-size: 0.95rem;
+ margin-bottom: 12px;
+ }
+
+ .card-tag {
+ display: inline-block;
+ background: var(--accent-teal-dim);
+ color: var(--accent-teal);
+ font-family: var(--font-mono);
+ font-size: 0.75rem;
+ padding: 4px 10px;
+ margin-right: 8px;
+ margin-bottom: 8px;
+ text-transform: uppercase;
+ letter-spacing: 0.05em;
+ }
+
+ .btn-class-capsule {
+ display: inline-block;
+ background: transparent;
+ color: var(--accent-teal);
+ border: 2px solid var(--accent-teal);
+ padding: 12px 28px;
+ font-family: var(--font-mono);
+ font-weight: 700;
+ text-transform: uppercase;
+ text-decoration: none;
+ letter-spacing: 0.05em;
+ font-size: 0.9rem;
+ cursor: pointer;
+ transition: all 0.2s ease;
+ margin-top: 16px;
+ }
+
+ .btn-class-capsule:hover {
+ background: var(--accent-teal);
+ color: var(--bg-primary);
+ box-shadow: var(--shadow-brutal);
+ }
+
+ .content-block {
+ max-width: 800px;
+ margin: 0 auto 48px;
+ padding: 0 24px;
+ }
+
+ .content-block p {
+ color: var(--text-secondary);
+ margin-bottom: 20px;
+ font-size: 1.05rem;
+ }
+
+ .content-block strong {
+ color: var(--text-primary);
+ font-weight: 700;
+ }
+
+ .content-block ul, .content-block ol {
+ margin-left: 24px;
+ margin-bottom: 20px;
+ color: var(--text-secondary);
+ }
+
+ .content-block li {
+ margin-bottom: 8px;
+ }
+
+ .checklist-grid {
+ display: grid;
+ grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+ gap: 16px;
+ margin: 32px 0;
+ }
+
+ .checklist-item {
+ background: var(--bg-card);
+ border-left: 4px solid var(--accent-teal);
+ padding: 20px;
+ color: var(--text-secondary);
+ font-size: 0.95rem;
+ }
+
+ .checklist-item strong {
+ display: block;
+ color: var(--accent-teal);
+ font-family: var(--font-mono);
+ font-size: 0.85rem;
+ margin-bottom: 6px;
+ text-transform: uppercase;
+ }
+
+ .divider-transit {
+ max-width: 800px;
+ margin: 48px auto;
+ padding: 0 24px;
+ border-top: 2px dashed var(--border-subtle);
+ position: relative;
+ text-align: center;
+ }
+
+ .divider-transit::after {
+ content: "●";
+ position: absolute;
+ top: -12px;
+ left: 50%;
+ transform: translateX(-50%);
+ background: var(--bg-primary);
+ color: var(--accent-teal);
+ padding: 0 12px;
+ font-size: 1.2rem;
+ }
+
+ footer {
+ background: var(--bg-card);
+ border-top: 2px solid var(--border-subtle);
+ padding: 32px 0;
+ margin-top: 64px;
+ text-align: center;
+ color: var(--text-muted);
+ font-size: 0.85rem;
+ font-family: var(--font-mono);
+ }
+
+ footer a {
+ color: var(--accent-teal);
+ text-decoration: none;
+ }
+
+ @media (max-width: 768px) {
+ h1 {
+ font-size: 1.8rem;
+ padding-left: 16px;
+ }
+
+ h2 {
+ font-size: 1.4rem;
+ }
+
+ .hero-class-container {
+ padding: 24px;
+ margin: 24px 12px;
+ }
+
+ .grid-class-layout {
+ grid-template-columns: 1fr;
+ padding: 0 16px;
+ }
+
+ .content-block {
+ padding: 0 16px;
+ }
+
+ .nav-container {
+ flex-direction: column;
+ align-items: flex-start;
+ }
+
+ .checklist-grid {
+ grid-template-columns: 1fr;
+ }
+ }
+ </style>
+  <meta property="og:title" content="글 목록 (2/2) · t3b08-hg-karaoke-pr">
+  <meta property="og:description" content="t3b08-hg-karaoke-pr에 올라온 글 목록입니다.">
+  <meta property="og:url" content="https://hwagok-song-review.namanavi.com/posts-2.html">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary">
+</head>
+<body>
+  <div class="container">
+    <header>
+ <div class="nav-inner">
+ <a href="/" class="nav-logo">나가내비</a>
+ <ul class="nav-links">
+ <li><a href="/">홈</a></li>
+ <li><a href="/regions">지역별</a></li>
+ <li><a href="/karaoke">가라오케</a></li>
+ <li><a href="/guide">이용가이드</a></li>
+ <li><a href="/blog">블로그</a></li>
+ </ul>
+ </div>
+ </header>
+    <main>
+      <h1>글 목록</h1>
+      <p>전체 40개 · 2/2 페이지</p>
+      <ul class="post-list">
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260721-0131.html">화곡 가라오케 가격 검색 효율을 높이는 구글 인덱싱 속도 초고속 광회선 대역폭 최적화</a>
+        <p class="post-item__summary">웹 환경에서 정보를 수집할 때 가장 중요한 것은 네트워크의 대역폭과 응답 속도입니다. 화곡 가라오케 가격 정보를 찾는 과정에서 페이지 로딩이 지연된다면 이는 인덱싱 효율이 떨어지고 있다는 신호일 수</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260721-0132.html">화곡 가라오케 가격 정보보다 중요한 구글 신뢰 지수 모발이식 솔루션의 도메인 파워</a>
+        <p class="post-item__summary">혹시 귀하의 도메인이 검색 엔진에서 제대로 평가받고 있다고 확신하십니까? 화곡 가라오케 가격 같은 유동적인 정보성 키워드를 다룰 때는 단순한 글 게시보다 도메인 자체가 가진 신뢰 지수가 훨씬 중요합</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260722-0265.html">화곡 가라오케 가격 비교하며 알아보는 합정 셔츠룸 추천정보</a>
+        <p class="post-item__summary">지인과 함께 처음으로 유흥 문화를 접할 때 가장 당혹스러운 부분은 바로 예산 책정입니다. 특히 화곡 가라오케 가격 수준을 기준으로 삼아 지역을 이동하면 시스템의 차이 때문에 혼선을 빚기 일쑤입니다.</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260722-0266.html">화곡 가라오케 가격 오해 풀고 정리한 공덕 가라오케 추천정보</a>
+        <p class="post-item__summary">흔히 화곡 가라오케 가격 정보만 알고 있으면 공덕 지역에서도 똑같은 비용으로 이용할 수 있다고 착각하곤 합니다. 하지만 각 지역마다 임대료와 운영 방식이 다르기에 단일 가격으로 모든 곳을 판단하는 </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260722-0267.html">화곡 가라오케 가격 고려하며 선택하는 상수 마사지 추천정보</a>
+        <p class="post-item__summary">제대로 된 휴식을 취하려면 청결한 환경, 숙련된 관리사의 기술, 그리고 적절한 비용이라는 세 가지 조건이 반드시 충족되어야 합니다. 간혹 화곡 가라오케 가격을 비교하는 습관 때문에 마사지 샵의 가격</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260722-0268.html">화곡 가라오케 가격 질문하며 확인하는 망원 노래방 추천정보</a>
+        <p class="post-item__summary">여러분은 평소 노래방을 고를 때 어떤 기준을 가장 중요하게 생각하시나요. 혹시 화곡 가라오케 가격 정도를 기준으로 삼아 무작정 근처 매장을 찾아 들어가지는 않으시는지 궁금합니다. 단순히 요금만 확인</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260722-0269.html">화곡 가라오케 가격 비교 시 홍대 노래방 추천정보 확인하는 법</a>
+        <p class="post-item__summary">주변 업소를 탐색하다 보면 화곡 가라오케 가격 같은 정보를 기준으로 삼으려는 분들이 많습니다. 하지만 단순히 비용적인 부분만 강조하는 매체는 정보의 편향성이 높을 가능성이 큽니다. 객관적인 데이터를</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260722-0270.html">화곡 가라오케 가격 대비 공덕 셔츠룸 추천정보 선택 기준</a>
+        <p class="post-item__summary">합리적인 소비를 지향하는 이용자들은 화곡 가라오케 가격과 같은 수치적인 지표를 먼저 검색합니다. 하지만 단순히 가격만으로 업소를 결정하는 것은 위험하며, 지불하는 비용에 포함된 서비스의 구성 요소가</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260722-0271.html">화곡 가라오케 가격 비교 전 연남 유흥 추천정보 예약 주의사항</a>
+        <p class="post-item__summary">많은 분이 화곡 가라오케 가격 정보를 확인하며 계획을 세우지만, 정작 중요한 예약 절차에서 큰 실수를 저지르기도 합니다. 가장 흔한 실패 지점은 전화 상담 시 모호한 약속을 그대로 수용하는 것입니다</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260722-0272.html">화곡 가라오케 가격 확인과 마곡 가라오케 추천정보 체크리스트</a>
+        <p class="post-item__summary">지역 내 유흥 시설을 방문할 때는 화곡 가라오케 가격 정보처럼 기준이 되는 수치를 우선 확인하게 됩니다. 그러나 방문의 만족도는 가격 외에도 접근성과 시설의 상태에 크게 좌우됩니다. 이번에는 효율적</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260722-0273.html">화곡 가라오케 가격 알아보며 마곡 유흥 추천정보 확인하기</a>
+        <p class="post-item__summary">오랜만에 만난 지인들과 마곡 근처에서 저녁 식사를 마친 후, 가벼운 마음으로 유흥 시설을 찾는 경우가 많습니다. 이때 가장 먼저 고민하게 되는 부분은 예상보다 높은 초기 비용일 것입니다. 화곡 가라</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260722-0274.html">화곡 가라오케 가격 비교하며 합정 노래방 추천정보 분석</a>
+        <p class="post-item__summary">흔히 노래방은 낮 시간에 방문하면 무조건 저렴할 것이라고 단정 짓는 경우가 많습니다. 하지만 이는 반만 맞는 이야기이며 실제로는 업체의 운영 방침에 따라 시간대별 단가가 상당히 다르게 책정되곤 합니</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260722-0275.html">화곡 가라오케 가격 말고 연남 클럽 추천정보 따져보기</a>
+        <p class="post-item__summary">클럽을 선택할 때는 분위기, 음악의 장르, 그리고 동행 인원 구성이 가장 중요한 충족 조건이 됩니다. 화곡 가라오케 가격 정보에 익숙한 분들도 클럽으로 넘어오면 완전히 다른 시스템에 당황하기 마련입</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/interview-001-j1a1u0.html">홍대 폐업과 화곡 가라오케 가격, 단골 손님이 본 원가 계산법</a>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/juice-1.html">화곡 가라오케 가격 안내</a>
+        <p class="post-item__summary">화곡 지역에서 가라오케를 이용하려는 분들은 가격 정보를 미리 확인하는 것이 중요합니다. 가라오케 실비는 운영 시간, 이용 인원, 음료 포함 여부 등에 따라 달라질 수 있으므로, 직접 방문하거나 전화</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/juice-2.html">화곡 가라오케 가격에 대해 알아볼 때 도움이 되는 정보</a>
+        <p class="post-item__summary">화곡에서 가라오케를 이용할 때 가격은 노래방 체인, 시간대, 객실 종류에 따라 달라질 수 있습니다. 대개는 시간 단위 요금과 음주 또는 간식 주문 여부에 따라 총액이 결정되므로, 방문 전에 각 매장</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/normal-1.html">화곡 가라오케 가격 정보</a>
+        <p class="post-item__summary">화곡 지역의 가라오케는 대중적인 이용 문화를 바탕으로 다양한 가격대가 존재합니다. 노래방은 일반적으로 시간제와 무제한 요금제로 나뉘어 운영되며, 시간제 요금은 주로 두 시간 단위로 책정되는 경우가 </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/normal-2.html">화곡 가라오케 가격 정보</a>
+        <p class="post-item__summary">화곡 지역의 가라오케 시설은 다양한 요금제를 운영하고 있어 이용자별 취향에 맞는 공간을 선택할 수 있습니다. 일반적인 가격体系는 시간별 요금과 인원수, 혹은 음료 포함 여부 등에 따라 달라질 수 있</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/normal-3.html">화곡 가라오케 가격 정보</a>
+        <p class="post-item__summary">화곡 지역에서 가라오케를 이용할 때 예산을 계획하는 방법은 다양합니다. 각 업소는 운영 시간과 실내 환경, 노래방 기기 수준에 따라 요금 체계를 다르게 책정하며, 이를 통해 고객이 원하는 만큼 편하</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/t3link-002-eq9mrk.html">두 억 받은 임대차 계약서 뒤에 숨겨진 홍대 상권의 숨소린</a>
+        <p class="post-item__summary">방구석에서 두꺼운 임대차 계약서를 뒤적거리다가 홍대 폐업 뉴스가 떠올랐다. 그 문서에는 권리금 2 억 원이라는 숫자가 하얀 잉크처럼 선명하게 박혀 있어, 마치 아직 마르지 않은 피 같다. 당시 임대</p>
+      </li>
+      </ul>
+    <nav class="pager">
+      <a class="pager__link" href="posts.html">1</a>
+      <span class="pager__current">2</span>
+    </nav>
+    </main>
+  </div>
+</body>
+</html>
